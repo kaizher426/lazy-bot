@@ -124,5 +124,9 @@ async def energy(ctx):
         light_speed = 8.98755179 * 10 ** 16
         most_famous_equation = mass * light_speed
         await ctx.channel.send(f"Einstein help me calculate: {most_famous_equation} J")
+        
+@bot.command(name="help")
+async def h(ctx):
+        await ctx.send("This is a bot that have a 'powerful translator', that translate chinese, english, malay, hindi and spanish. Besides, it also have a calculator that calculate +,-,x,/,cos,sin,tan and log. It also can flex i know some physics. More function will be add in if i am not lazy.")
 
 bot.run(os.getenv('TOKEN'))
