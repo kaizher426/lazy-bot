@@ -87,16 +87,16 @@ async def calc(ctx):
             output = number_1 * number_2
 
         elif operator == "sin":
-            output = math.sin(number_1, number_2)
+            output = math.sin(number_1) + math.sin(number_2)
 
         elif operator == "cos":
-            output = math.cos(number_1, number_2)
+            output = math.cos(number_1) + math.cos(number_2)
 
         elif operator == "tanh":
-            output = math.tan(number_1, number_2)
+            output = math.tan(number_1) + math.tan(number_2)
 
         elif operator == "log":
-            output = math.log(number_1, number_2)
+            output = math.log(number_1) + math.log(number_2)
 
         else:
             await ctx.send("invalid input")
@@ -124,9 +124,9 @@ async def energy(ctx):
         light_speed = 8.98755179 * 10 ** 16
         most_famous_equation = mass * light_speed
         await ctx.channel.send(f"Einstein help me calculate: {most_famous_equation} J")
-        
-@bot.command(name="help")
-async def h(ctx):
-        await ctx.send("This is a bot that have a 'powerful translator', that translate chinese, english, malay, hindi and spanish. Besides, it also have a calculator that calculate +,-,x,/,cos,sin,tan and log. It also can flex i know some physics. More function will be add in if i am not lazy.")
+
+@bot.command(name="pleH")
+async def i_like_to_help(ctx):
+  await ctx.send("I have a friend call Johnny. He is like lofi-girl working 24/7. Besides, he is also a genius. He know hindi, spanish, malay, chinese and english. Maybe he will work harder to learn more languages. I also have anotehr friend call szzsz. He is a professor since 1 years old. Now, working for lazy boss.")
 
 bot.run(os.getenv('TOKEN'))
