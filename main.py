@@ -8,6 +8,7 @@ import random
 
 bot = Bot(command_prefix='!')
 translator = googletrans.Translator()
+link = "https://www.youtube.com/watch?v=xvFZjo5PgG0"
 
 @bot.event
 async def on_ready():
@@ -109,24 +110,21 @@ async def force(ctx):
         mass = random.randint(0, 442)
         acceleration = random.randint(0, 1000)
         force = mass * acceleration
-        await ctx.channel.send(f"You are running at {acceleration} m/s. This is your fat: {mass} KG.This is your force: {force} N. I will convince you to run slower, be lazy, is ok.")
+        
+        await ctx.channel.send(f"You are running at {acceleration} m/s. This is your fat: {mass} KG.This is your force: {force} N. I will convince you to run slower, be lazy, is ok. If you wan to calm down, go to : <{link}>")
 
 @bot.command(name='KE')
 async def kinetic_energy(ctx):
         velocity_squared = (random.randint(0, 10000))**2
         mass = random.randint(0, 442)
         KE = (mass * velocity_squared)/2
-        await ctx.channel.send(f"This is your fat: {mass} KG. You run {velocity_squared} meter per sencond square. Your Kinetic energy: {KE} J")
+        await ctx.channel.send(f"This is your fat: {mass} KG. You run {velocity_squared} meter per sencond square. Your Kinetic energy: {KE} J. If you wan to calm down, go to : <{link}>")
 
 @bot.command(name="E")
 async def energy(ctx):
         mass = random.randint(0, 442)
         light_speed = 8.98755179 * 10 ** 16
         most_famous_equation = mass * light_speed
-        await ctx.channel.send(f"Einstein help me calculate: {most_famous_equation} J")
-
-@bot.command(name="pleH")
-async def i_like_to_help(ctx):
-  await ctx.send("I have a friend call Johnny. He is like lofi-girl working 24/7. Besides, he is also a genius. He know hindi, spanish, malay, chinese and english. Maybe he will work harder to learn more languages. I also have anotehr friend call szzsz. He is a professor since 1 years old. Now, working for lazy boss.")
+        await ctx.channel.send(f"Einstein help me calculate: {most_famous_equation} J. If you wan to calm down, go to : <{link}>")
 
 bot.run(os.getenv('TOKEN'))
